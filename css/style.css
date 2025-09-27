@@ -1,0 +1,830 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	font-family: 'Open Sans', sans-serif;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+section {
+	scroll-margin-top: 80px;
+}
+
+/*nav bar */
+.navbar-nav .nav-item {
+	margin: 0 18px;
+	/* 18px space left and right */
+}
+
+.navbar-nav .nav-link {
+	color: #fff;
+	padding: 8px 15px;
+	border-radius: 8px;
+	transition: all 0.3s ease-in-out;
+	position: relative;
+}
+
+.navbar-nav .nav-link:hover {
+	background-color: rgb(77, 215, 234);
+	color: #0a3d62;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+	transform: translateY(-2px);
+}
+
+/* Profile */
+
+.profile-header img {
+	height: 500px;
+	width: 500px;
+	object-fit: cover;
+	object-position: top top;
+	border-radius: 50%;
+	/* Makes it a perfect circle */
+	border: 4px solid #2583c6;
+	/* Border color matching your theme */
+	box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+	/* Soft shadow */
+	display: block;
+	margin: 0 auto;
+	/* Center the image */
+	transition: transform 0.3s ease;
+}
+
+.profile-header img:hover {
+	transform: scale(1.025);
+	/* Slight zoom on hover */
+}
+
+.profile-card {
+	display: flex;
+	/* Arrange children in a row */
+	justify-content: space-between;
+	/* Optional: space between items */
+	gap: 20px;
+	/* Space between left and right divs */
+	padding: 20px;
+}
+
+.profile-header,
+.profile-body {
+	flex: 1;
+	/* Make both boxes take equal width */
+	padding: 20px;
+	background-color: #0796bd7d;
+	border-radius: 10px;
+}
+
+.profile-body h1 {
+	font-size: 2.8rem;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 700;
+	color: #065368;
+	text-align: center;
+	margin-bottom: 8px;
+	letter-spacing: 2.5px;
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+	animation: fadeInDown 1s ease-out;
+}
+
+.profile-body .occupation {
+	font-size: 1.2rem;
+	color: #205d8f;
+	text-align: center;
+	font-style: italic;
+	letter-spacing: 0.5px;
+	margin-bottom: 20px;
+	animation: fadeInUp 1.2s ease-out;
+}
+
+/* Fade animations */
+@keyframes fadeInDown {
+	from {
+		opacity: 0;
+		transform: translateY(-20px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.profile-body ul {
+	list-style: none;
+	/* Remove default bullets */
+	padding: 0;
+	margin: 0 auto;
+	max-width: 600px;
+	text-align: left;
+	font-size: 1rem;
+	line-height: 1.6;
+	color: #333;
+}
+
+.profile-body ul li i {
+	margin-right: 8px;
+	color: #0a3d62;
+	font-size: 16px;
+}
+
+.profile-body ul li {
+	background-color: #f5f9fc;
+	border-left: 4px solid #0a3d62;
+	padding: 12px 18px;
+	margin-bottom: 16px;
+	border-radius: 8px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+	transition: transform 0.2s ease;
+}
+
+.profile-body ul li:hover {
+	transform: translateX(5px);
+	background-color: #eaf3f8;
+}
+
+.profile-body ul li strong {
+	color: #0a3d62;
+	font-weight: 600;
+}
+
+.follow-me-text {
+	margin-top: 40px;
+	margin-bottom: 15px;
+	text-align: center;
+	font-size: 1.1rem;
+	color: #0a3d62;
+	font-weight: 600;
+	letter-spacing: 0.5px;
+	font-family: 'Poppins', sans-serif;
+}
+
+
+/* Social media logos*/
+.social-links {
+	margin-top: 30px;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+	flex-wrap: wrap;
+}
+
+.social-links a {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 50px;
+	height: 50px;
+	font-size: 24px;
+	color: #0a3d62;
+	background-color: #f0f4f8;
+	border-radius: 50%;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+	transition: all 0.3s ease-in-out;
+	text-decoration: none;
+}
+
+.social-links a:hover {
+	background-color: #0a3d62;
+	color: #fff;
+	transform: translateY(-5px) scale(1.1);
+	box-shadow: 0 8px 20px rgba(10, 61, 98, 0.2);
+}
+
+/* Default LinkedIn style */
+.social-links a[href*="linkedin"] {
+	background-color: #f2f4f6;
+	color: #0a3d62;
+}
+
+/* LinkedIn hover style */
+.social-links a[href*="linkedin"]:hover {
+	background-color: #0A66C2;
+	/* LinkedIn blue */
+	color: #fff;
+	transform: translateY(-5px) scale(1.1);
+	box-shadow: 0 8px 20px rgba(10, 102, 194, 0.3);
+}
+
+
+/* Default Facebook style */
+.social-links a[href*="facebook"] {
+	background-color: #eef0f3;
+	/* neutral background */
+	color: #0a3d62;
+}
+
+/* Hover style with official Facebook blue */
+.social-links a[href*="facebook"]:hover {
+	background-color: #1877F2;
+	/* Facebook blue */
+	color: #fff;
+	transform: translateY(-5px) scale(1.1);
+	box-shadow: 0 8px 20px rgba(24, 119, 242, 0.3);
+}
+
+.social-links a[href*="instagram"] {
+	background: #e184cb;
+	/* default */
+	color: #0a3d62;
+}
+
+.social-links a[href*="instagram"]:hover {
+	background: radial-gradient(circle at 30% 107%,
+			#fdf497 0%, #fdf497 5%,
+			#fd5949 45%,
+			#d6249f 60%,
+			#285AEB 90%);
+	color: #fff;
+	transform: translateY(-5px) scale(1.1);
+	box-shadow: 0 8px 20px rgba(223, 55, 103, 0.4);
+}
+
+/* Default Gmail style */
+.social-links a[href^="mailto:"] {
+	background-color: #f5f5f5;
+	/* Light neutral */
+	color: #c71610;
+	/* Gmail red */
+	padding: 10px;
+	border-radius: 50%;
+	transition: all 0.3s ease-in-out;
+}
+
+/* Gmail hover effect */
+.social-links a[href^="mailto:"]:hover {
+	background-color: #c71610;
+	color: #fff;
+	transform: translateY(-5px) scale(1.1);
+	box-shadow: 0 8px 20px rgba(199, 22, 16, 0.3);
+}
+
+/*About Section */
+
+.main_heading h1 {
+	letter-spacing: 4px;
+	/* Adjust this value to your preference */
+	font-weight: 700;
+}
+
+.about-info .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem; /* Equal space between items */
+}
+
+.about-info .row > div {
+  flex: 1 1 calc(50% - 0.75rem); /* Two columns with spacing accounted */
+  min-width: 250px; /* Optional: prevents too small on very small screens */
+}
+
+@media (max-width: 576px) {
+  .about-info .row > div {
+    flex: 1 1 100%; /* Stack on small screens */
+  }
+}
+
+.about-container {
+	background: linear-gradient(135deg, #f0f4f8, #ffffff);
+	font-family: 'Poppins', sans-serif;
+	padding: 80px 0;
+}
+
+.section-title {
+	font-size: 28px;
+	font-weight: 700;
+	color: #0a3d62;
+	position: relative;
+	margin-bottom: 20px;
+	
+}
+
+.section-title::after {
+	content: "";
+	display: block;
+	width: 130px;
+	height: 3px;
+	background-color: #2583c6;
+	margin-top: 8px;
+	margin: 16px auto 0;
+	border-radius: 2px;
+}
+
+.about-description {
+	font-size: 17px;
+	line-height: 1.8;
+	color: #555;
+}
+
+.about-container strong {
+	color: #1a3c54;
+	font-weight: 600;
+}
+
+.available-text {
+	color: #28a745;
+	font-weight: 600;
+}
+
+.btn-outline-primary {
+	border-radius: 30px;
+	font-weight: 600;
+	font-size: 0.95rem;
+	padding: 10px 20px;
+	transition: all 0.3s ease;
+	border: 2px solid #2583c6;
+	color: #2583c6;
+}
+
+.btn-outline-primary:hover {
+	background-color: #0a3d62;
+	color: #fff;
+	transform: translateY(-2px);
+	box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Spacing */
+@media (max-width: 767px) {
+	.about-container {
+		padding: 60px 20px;
+	}
+
+	.section-title {
+		font-size: 24px;
+	}
+
+	.btn-outline-primary {
+		font-size: 0.85rem;
+		padding: 8px 16px;
+	}
+}
+
+/* Skills section */
+
+#skills h1 {
+	letter-spacing: 4px;
+	/* Adjust spacing as needed */
+	color: #0a3d62;
+	/* Optional: Matches your theme */
+	font-weight: 700;
+}
+
+.skill-box {
+	background: linear-gradient(135deg, #e6f0ff, #f7faff);
+	/* Soft blue gradient */
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	border: 1px solid #dfe9f3;
+	border-radius: 1rem;
+	min-height: 230px;
+}
+
+.skill-box:hover {
+	transform: translateY(-6px);
+	box-shadow: 0 12px 25px rgba(10, 61, 98, 0.15);
+}
+
+.skill-box i {
+	transition: transform 0.3s ease;
+}
+
+.skill-box:hover i {
+	transform: scale(1.1);
+}
+
+.skill-box h5 {
+	margin-top: 10px;
+	font-size: 1.25rem;
+	color: #0a3d62;
+}
+
+.skill-box p {
+	font-size: 0.95rem;
+	color: #333;
+	margin-bottom: 0;
+}
+
+/*Internships*/
+
+#internships {
+	background: linear-gradient(135deg, #f8fbff, #eef3f7);
+	font-family: 'Poppins', sans-serif;
+}
+
+.intern-card {
+	background-color: #ffffff;
+	border-left: 4px solid #0a3d62;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.intern-card h5 i {
+	color: #0a3d62;
+	/* Crisp modern blue that fits your portfolio’s theme */
+	font-size: 1.2rem;
+}
+
+.intern-card:hover {
+	transform: translateY(-6px);
+	box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
+}
+
+#internships h1 {
+	letter-spacing: 2px;
+	color: #0a3d62;
+}
+
+#internships .d-flex .btn-outline-primary {
+	border-radius: 30px;
+	font-size: 0.85rem;
+	font-weight: 600;
+	white-space: nowrap;
+	/* prevents text wrap on small screens */
+}
+
+#internships .badge {
+	font-size: 0.8rem;
+	padding: 6px 12px;
+	border-radius: 20px;
+}
+
+.custom-badge {
+	background-color: #dee2e6;
+	/* Light gray */
+	color: #0a3d62;
+	/* Dark blue to match your theme */
+	font-weight: 500;
+	font-size: 0.9rem;
+	padding: 0.5em 1em;
+	border-radius: 20px;
+}
+
+
+#internships .btn-outline-primary {
+	border-radius: 30px;
+	font-size: 0.85rem;
+	font-weight: 600;
+}
+
+/*Certifications*/
+
+#certifications {
+	background: linear-gradient(135deg, #f5f9fc, #eaf3fa);
+	padding: 80px 0;
+	font-family: 'Poppins', sans-serif;
+}
+
+.cert-card {
+	background-color: #d3e0e5;
+	border-left: 5px solid #2e86de;
+	border-radius: 12px;
+	padding: 20px 25px;
+	background: linear-gradient(135deg, #ffffff, #f7faff);
+	/* Soft blue gradient */
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cert-card:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 12px 24px rgba(31, 88, 232, 0.12);
+	border-left-color: #0a3d62;
+}
+
+#certifications h1 {
+	letter-spacing: 4px;
+	font-weight: 700;
+	font-size: 2.5rem;
+	color: #0a3d62;
+	margin-bottom: 40px;
+	font-size: 3.2rem;
+}
+
+.cert-card h5 {
+	color: #0a3d62;
+	font-weight: 600;
+}
+
+.cert-card p {
+	color: #555;
+	font-size: 0.95rem;
+	line-height: 1.6;
+	margin-bottom: 10px;
+}
+
+#certifications .btn-outline-primary {
+	border-radius: 30px;
+	font-size: 0.9rem;
+	font-weight: 600;
+	padding: 8px 20px;
+	color: #0a3d62;
+	border-color: #0a3d62;
+	transition: all 0.3s ease;
+}
+
+#certifications .btn-outline-primary:hover {
+	background-color: #0a3d62;
+	color: #fff;
+	transform: scale(1.05);
+}
+
+/*Github */
+
+.github-section {
+	background: linear-gradient(135deg, #15b7f7, #1d95ea, #13b2de);
+	/* Light blue to white blend */
+	color: #0a3d62;
+
+	padding-top: 4rem;
+	padding-bottom: 4rem;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.btn-github {
+	background-color: #ffffff;
+	color: #0f2027;
+	padding: 12px 28px;
+	font-size: 1rem;
+	font-weight: 600;
+	border: none;
+	border-radius: 50px;
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+	transition: all 0.3s ease-in-out;
+}
+
+.btn-github:hover {
+	background-color: #2d6b97;
+	color: #ffffff;
+	transform: translateY(-3px);
+	box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+/*Contact*/
+
+/* Label styling */
+.form-label {
+	font-weight: 600;
+	font-size: 1rem;
+	color: #0a3d62;
+	margin-bottom: 6px;
+}
+
+/* Input field for Full Name */
+.full-name-input {
+	border: 2px solid #ddd;
+	border-radius: 8px;
+	padding: 10px 14px;
+	font-size: 1rem;
+	transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Focus effect */
+.full-name-input:focus {
+	border-color: #0a3d62;
+	box-shadow: 0 0 5px rgba(10, 61, 98, 0.3);
+	outline: none;
+}
+
+/* Placeholder text */
+.full-name-input::placeholder {
+	color: #999;
+	font-size: 0.95rem;
+}
+
+/* Label Styling */
+.form-label {
+	font-weight: 600;
+	font-size: 1rem;
+	color: #0a3d62;
+	margin-bottom: 6px;
+}
+
+/* Input field styling for Email */
+.email-input {
+	border: 2px solid #ddd;
+	border-radius: 8px;
+	padding: 10px 14px;
+	font-size: 1rem;
+	transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* On focus effect */
+.email-input:focus {
+	border-color: #0a3d62;
+	box-shadow: 0 0 5px rgba(10, 61, 98, 0.3);
+	outline: none;
+}
+
+/* Placeholder text styling */
+.email-input::placeholder {
+	color: #999;
+	font-size: 0.95rem;
+}
+
+/* Helper text */
+.form-text {
+	color: #6c757d;
+	font-size: 0.875rem;
+	margin-top: 4px;
+}
+
+/* Container styling */
+.mb-3 label.form-label {
+	font-weight: 600;
+	font-size: 1rem;
+	color: #0a3d62;
+	margin-bottom: 10px;
+	display: block;
+}
+
+/* Radio buttons group styling */
+.form-check {
+	margin-right: 20px;
+}
+
+/* Radio input itself */
+.form-check-input {
+	cursor: pointer;
+	border: 2px solid #0a3d62;
+	width: 18px;
+	height: 18px;
+	transition: all 0.3s ease;
+}
+
+/* Checked state */
+.form-check-input:checked {
+	background-color: #0a3d62;
+	border-color: #0a3d62;
+}
+
+/* Focus state */
+.form-check-input:focus {
+	box-shadow: 0 0 5px rgba(10, 61, 98, 0.5);
+}
+
+/* Label beside each radio */
+.form-check-label {
+	font-weight: 500;
+	margin-left: 5px;
+	color: #333;
+	transition: color 0.3s ease;
+}
+
+.form-check-input:checked+.form-check-label {
+	color: #0a3d62;
+}
+
+/* Label styling */
+.form-label {
+	font-weight: 600;
+	font-size: 1rem;
+	color: #0a3d62;
+	margin-bottom: 6px;
+}
+
+/* Phone input field */
+.phone-input {
+	border: 2px solid #ddd;
+	border-radius: 8px;
+	padding: 10px 14px;
+	font-size: 1rem;
+	transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Focus effect */
+.phone-input:focus {
+	border-color: #0a3d62;
+	box-shadow: 0 0 5px rgba(10, 61, 98, 0.3);
+	outline: none;
+}
+
+/* Placeholder color */
+.phone-input::placeholder {
+	color: #999;
+	font-size: 0.95rem;
+}
+
+/* Label for Textarea */
+.form-label {
+	font-weight: 600;
+	font-size: 1rem;
+	color: #0a3d62;
+	margin-bottom: 6px;
+}
+
+/* Textarea Styling */
+.message-box {
+	border: 2px solid #ddd;
+	border-radius: 10px;
+	padding: 12px 16px;
+	font-size: 1rem;
+	resize: vertical;
+	transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+/* On Focus Effect */
+.message-box:focus {
+	border-color: #0a3d62;
+	box-shadow: 0 0 8px rgba(10, 61, 98, 0.15);
+	outline: none;
+}
+
+/* Placeholder Styling */
+.message-box::placeholder {
+	color: #999;
+	font-size: 0.95rem;
+}
+/*  */
+.carousel-item img {
+	width: 100%;
+	height: 93vh;
+}
+
+.horizontal-card-img img {
+	width: 100%;
+	height: 35vh;
+}
+
+.my-service img {
+	width: 100%;
+	height: 100%;
+}
+
+.chekcout-my-profile {
+	background: #a6dcef;
+}
+
+/*Footer section*/
+
+footer {
+	background: linear-gradient(90deg, #48a8d7, #416788);
+	color: #ffffff;
+	padding: 2.5px 0;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1rem;
+	letter-spacing: 0.5px;
+	box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+	margin: 0;
+	font-weight: 500;
+}
+
+.footer-contact {
+	font-size: 0.95rem;
+	letter-spacing: 0.5px;
+}
+
+.footer-email {
+	color: #ffffff;
+	text-decoration: none;
+	transition: color 0.3s ease;
+}
+
+.footer-email:hover {
+	color: #7ec8e3;
+	/* A soft sky blue on hover */
+	text-decoration: underline;
+}
+
+footer strong {
+	color: #ffd700;
+	/* Golden accent */
+	font-weight: bold;
+}
+
+/*.my-service .row>*{
+	padding-right: 0;
+    padding-left: 0;
+}*/
+
+/*for responsive design*/
+/*// X-Small devices (portrait phones, less than 576px)*/
+/*// No media query for `xs` since this is the default in Bootstrap*/
+
+/*// Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) {}
+
+/*// Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {}
+
+/*// Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {}
+
+/*// X-Large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {}
+
+/*// XX-Large devices (larger desktops, 1400px and up)*/
+@media (min-width: 1400px) {}

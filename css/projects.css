@@ -1,0 +1,45 @@
+.text-center h1 {
+    letter-spacing: 4px;
+    /* Adjust spacing as needed */
+    color: #0a3d62;
+    /* Optional: Matches your theme */
+    font-weight: 700;
+}
+.main-heading {
+    letter-spacing: 2px;
+    color: #0a3d62;
+}
+
+/*Project card left side */
+
+.project-row {
+    background-color: #fafbfc;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-thumbnail img {
+    max-height: 240px;
+    object-fit: contain;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}   
+
+.project-thumbnail img:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+}
+
+/*Project info (rightside)*/
+
+.project-title {
+    font-size: 1.5rem;
+    color: #0a3d62;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+.project-links a {
+    text-decoration: none;
+    margin-right: 12px;
+    color: #2583c6;
+}
